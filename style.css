@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+main{
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav{
+    height: 20%;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: rgb(2, 64, 221);
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+}
+#createbtn{
+    padding: 8px 15px;
+    background-color: rgb(252, 245, 245);
+    border: none;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.product-container{
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    
+ display: flex;
+ gap: 1.5rem;
+}
+
+.product-cart{
+    height: 40%;
+    width: 18%;
+    /* border: 2px solid gray; */
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 5px 0px 10px rgb(221, 220, 220);
+    display: flex;
+    justify-content: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+    gap: 7px;
+    cursor: pointer;
+
+}
+
+.product-cart:hover{
+     box-shadow: 5px 0px 15px rgb(227, 220, 220);
+}
+
+.imgg img{
+ height: 200px;
+ width: 100%;
+ border-radius: 5px;
+ object-fit: cover;
+
+}
+
+.btns{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 5px;
+    cursor: pointer;
+
+}
+
+#btn1{
+    padding: 8px 15px;
+    background-color: rgb(0, 176, 21);
+    border-radius: 5px;
+    color: white;
+    border: none;
+      cursor: pointer;
+}
+
+
+
+#btn2{
+
+     padding: 8px 15px;
+    background-color: rgb(230, 40, 19);
+    border-radius: 5px;
+    color: white;
+    border: none;
+      cursor: pointer;
+
+}
+
+.dform{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.457);
+    position: absolute;
+   top: 0;
+   left: 0;
+   display: none;
+   justify-content: center;
+   align-items: center;
+}
+
+form{
+    height: 50%;
+    width: 45%;
+     display: flex;
+     flex-direction: column;
+    gap: 1rem;
+    border-radius: 10px;
+    justify-content: space-around;
+    background-color: white;
+    padding: 8px;
+   cursor: pointer;
+
+}
+
+form input{
+    padding: 10px 20px;
+}
+
+form button{
+    padding: 10px;
+    background-color: rgb(3, 213, 27);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cross{
+    top :24%;
+    left:70%;
+    position: absolute;
+    font-size: 2rem;
+    cursor: pointer;
+}
