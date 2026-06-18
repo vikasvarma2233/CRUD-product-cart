@@ -6,7 +6,7 @@ let   upBtn = document.querySelector("#btn1");
 
 
 
-let ProductData = [];
+let ProductData = JSON.parse(localStorage.getItem("products"))  || [];
 
 let upData = null;
 
@@ -68,8 +68,10 @@ form.addEventListener("submit",(e)=>{
     if(upData !== null){
         ProductData[upData] = obj;
         upData = null;
+          localStorage.setItem("products",JSON.stringify(ProductData));
      }else{
     ProductData.push(obj);
+          localStorage.setItem("products",JSON.stringify(ProductData));
      }
    
    console.log(ProductData)
@@ -99,6 +101,7 @@ let upFunction = (proName)=>{
 let onDelete = (idx)=>{
      
     ProductData.splice(idx,1);
+    localStorage.setItem("products", JSON.stringify(ProductData));
     addProduct();
 }
 
