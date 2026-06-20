@@ -3,6 +3,9 @@ let   productForm = document.querySelector("#dform");
 let productContainer = document.querySelector("#procontainer");
 let form = document.querySelector("form");
 let   upBtn = document.querySelector("#btn1");
+let conDel = document.querySelector("#popdl");
+let yesBtn = document.querySelector("#ybtn");
+let noBtn = document.querySelector("#nbtn");
 
 
 
@@ -99,12 +102,20 @@ let upFunction = (proName)=>{
 
 
 
-let onDelete = (idx)=>{
-     
-    ProductData.splice(idx,1);
-    localStorage.setItem("products", JSON.stringify(ProductData));
-    addProduct();
-}
+let onDelete = (idx) => {
+    conDel.style.display = "flex";
+
+    yesBtn.onclick = () => {
+        ProductData.splice(idx, 1);
+        localStorage.setItem("products", JSON.stringify(ProductData));
+        conDel.style.display = "none";
+        addProduct();
+    };
+
+    noBtn.onclick = () => {
+        conDel.style.display = "none";
+    };
+};
 
 
 
