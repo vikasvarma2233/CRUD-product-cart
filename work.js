@@ -50,8 +50,9 @@ form.addEventListener("submit",(e)=>{
    let proPrice =e.target[2].value;
    let proUrl  = e.target[3].value;
 
-     if(proName ==="" || proDes==="" || proPrice==="" ||proUrl===""){
+     if(proName.trim() ==="" || proDes.trim() ==="" || proPrice.trim() ==="" ||proUrl.trim()===""){
          productForm.style.display = "none";
+         alert("please fill all the fields");
         return
      }
 
